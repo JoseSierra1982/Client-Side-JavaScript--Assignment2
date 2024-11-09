@@ -1,0 +1,62 @@
+/* General styling for gallery */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF1DB;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#gallery {
+    max-width: 800px;
+    margin: auto;
+}
+
+figure {
+    margin: 0 0 1em;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+}
+
+#thumbnail-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+#thumbnail-list img {
+    cursor: pointer;
+    width: 100px;
+    height: 66px;
+    border-radius: 5px;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+/* Grayscale filter for inactive thumbnails */
+.inactive-thumbnail {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+#thumbnail-list img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    opacity: 1;
+}
